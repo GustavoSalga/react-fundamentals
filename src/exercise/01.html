@@ -14,3 +14,28 @@
 <!-- 🐨 Append the div to the root div using `append` -->
 <!--   💰 document.getElementById('root') -->
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--div id="root"></div> 1° forma de criar-->
+    <script type="module">
+        // Criando a div de root em código - > 2° forma de criar o <div id = "root"></div>
+        let root = document.createElement('div')
+        root.id = 'root'
+        // A div root vai encaixada dentro do <body></body>
+        document.body.append(root)
+        // <div id = "root"></div> criada acima
+        let div = document.createElement('div') // createElement cria um novo elemento na página html via JS
+        div.textContent = 'Hello World!'
+        div.className = 'container' // é como se eu estivesse escrevendo assim: <div class="container>Hello World!</div>"
+        // document.querySelector('#root').append(div) // Localizei a Div root com o querySelector e depois pedi ao JS para colocar a div (criada no Element) dentro do root
+        root.append(div) // Já temos a div root capturada em uma variável
+    </script>
+</body>
+</html>
