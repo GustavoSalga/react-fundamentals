@@ -18,7 +18,12 @@ const largeBox = <div>large orange box</div>
 
 function App() {
   return (
-    <div>
+    <div>   
+       {/*
+            Em JSX, estilos CSS são passados como objetos para o elemento
+            O nome dos atributos em CSS, escritas em kebab-case
+       */}
+        <div style={ {marginTop: '20px', backgroundColor: 'blue'} } ></div>
       {smallBox}
       {mediumBox}
       {largeBox}

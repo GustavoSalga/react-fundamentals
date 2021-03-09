@@ -44,11 +44,23 @@
     </div>
   )
 }
+    function Soma({num1, num2}) {
+        return (
+            <React.Fragment>
+                <p>O resultado da soma é</p>
+                <div>{num1 + num2}</div>
+            </React.Fragment>
+        )
+    }
 // Renderizar = processar um código JS para gerar elementos HTML
 // Usando o componente personalizado representado pela função Message
 // o element foi declarado ali em cima e aqui ele está mudando de valor
     element = (
         <div className="container">
+            { /* Quando for necessário passar props cujo valor NÃO SEJA string,
+                é necessário passar o valor entre chaves */
+            }
+            <Soma num1={100} num2={200} />
             <Message subject='mamãe' greeting='Alô' />
             <Message greeting='Bem-vindo' subject='humano' />
         </div>
